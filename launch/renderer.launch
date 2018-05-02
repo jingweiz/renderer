@@ -1,0 +1,51 @@
+<launch>
+    <node pkg = "rviz"      type = "rviz"           name = "rviz"           args = "-d /home/zhang/.rviz/renderer.rviz">
+    </node>
+    <node pkg = "renderer"  type = "renderer_node"  name = "renderer_node"  output = "screen"   required = "true">
+        <param name = "display"                             value = "true"          />
+        <param name = "seed"                                value = "123"           />
+        <param name = "frm_wld"         type = "string"     value = "frm_wld"       />
+        <param name = "frm_bot"         type = "string"     value = "frm_bot"       />
+        <param name = "frm_camera"      type = "string"     value = "frm_camera"    />
+        <param name = "dir_dat"         type = "string"     value = "/home/zhang/kinetic_ws/src/renderer/data/"/>
+        <param name = "dir_pcd"         type = "string"     value = "/home/zhang/kinetic_ws/src/renderer/pcd/"/>
+        <param name = "fil_obs"         type = "string"     value = "office"        />
+        <param name = "fil_tgt"         type = "string"     value = "chair"         />
+        <param name = "tpc_pcl_obs"     type = "string"     value = "/pcl_obs"      />
+        <param name = "tpc_pcl_tgt"     type = "string"     value = "/pcl_tgt"      />
+        <param name = "tpc_pcl_wld"     type = "string"     value = "/pcl_wld"      />
+        <param name = "tpc_scans"       type = "string"     value = "/scans"        />
+        <param name = "tpc_depth"       type = "string"     value = "/depth"        />
+        <param name = "tpc_color"       type = "string"     value = "/color"        />
+        <param name = "tpc_mkr_camera"  type = "string"     value = "/mkr_camera"   />
+        <param name = "ind2val"                             value = "0.25"          />
+        <param name = "map_hei_ind"                         value = "37"            />
+        <param name = "map_wid_ind"                         value = "16"            />
+        <param name = "floorZ_val"                          value = "-0.08"         />
+        <param name = "tgtZ_val"                            value = "0.02"          />
+        <param name = "obsZ_min_val"                        value = "0.10"          />
+        <param name = "cameraX_val"                         value = "0.135"         />
+        <param name = "cameraZ_val"                         value = "0.12"          />
+        <param name = "num_act"                             value = "4"             />
+        <param name = "color_hei"                           value = "180"           />
+        <param name = "color_wid"                           value = "320"           />
+        <param name = "angleY_min"                          value = "-0.7854"       />
+        <param name = "angleY_max"                          value = "0.7854"        />
+        <param name = "angleZ_min"                          value = "-0.5236"       />
+        <param name = "angleZ_max"                          value = "0.5236"        />
+        <param name = "sense_min"                           value = "0.01"          />
+        <param name = "sense_max"                           value = "4.5"           />
+        <param name = "value_miss"                          value = "0.0"           />
+        <param name = "range_min"                           value = "0.5"           />
+        <param name = "range_max"                           value = "4.5"           />
+        <param name = "use_inf"                             value = "false"         />
+        <param name = "step_dist_val"                       value = "0.3"           />
+        <param name = "step_deg"                            value = "30."           />
+        <param name = "reward_step"                         value = "-0.005"        />
+        <param name = "reward_collision"                    value = "-0.05"         />
+        <param name = "reward_reach"                        value = "1."            />
+        <param name = "dist_reach"                          value = "1."            />
+        <param name = "tpc_preprocess"  type = "string"     value = "/preprocess"   />
+        <param name = "tpc_render"      type = "string"     value = "/render"       />
+    </node>
+</launch>

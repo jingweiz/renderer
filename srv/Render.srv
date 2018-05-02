@@ -1,0 +1,5 @@
+int32             action
+---
+sensor_msgs/Image color
+bool              terminal
+float32           reward
